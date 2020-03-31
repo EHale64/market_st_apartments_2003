@@ -8,4 +8,11 @@ class Building
   def add_unit(unit)
     @units << unit
   end
+
+  def renters
+    #if unit.renter != nil
+    #  @renters << renter
+    @renters
+    #end
+  end
 end
