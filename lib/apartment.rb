@@ -1,6 +1,6 @@
 class Apartment
 
-  attr_accessor :number, :monthly_rent, :bathrooms, :bedrooms, :renter
+  attr_reader :number, :monthly_rent, :bathrooms, :bedrooms, :renter
 
   def initialize(number: , monthly_rent:,  bathrooms:, bedrooms:)
     @number = number
@@ -9,8 +9,8 @@ class Apartment
     @bedrooms = bedrooms
     @renter = nil
   end
-end
 
-def add_renter(renter)
-  @renter = renter
+  def add_renter(renter)
+   @renter = renter
+  end
 end
