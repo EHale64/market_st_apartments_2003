@@ -1,8 +1,8 @@
 class Building
-  attr_reader :units, :renters
+  attr_reader :units
+
   def initialize
     @units = []
-    @renters = []
   end
 
   def add_unit(unit)
@@ -10,9 +10,8 @@ class Building
   end
 
   def renters
-    #if unit.renter != nil
-    #  @renters << renter
-    @renters
-    #end
+    @units.map do |unit|
+     unit.renter.name
+    end
   end
 end
