@@ -1,12 +1,17 @@
 class Apartment
 
-  attr_reader :number, :monthly_rent, :bathrooms, :bedrooms, :renter
+  attr_reader :number,
+              :monthly_rent,
+              :bathrooms,
+              :bedrooms,
+              :renter
 
-  def initialize(number: , monthly_rent:,  bathrooms:, bedrooms:)
-    @number = number
-    @monthly_rent = monthly_rent
-    @bathrooms = bathrooms
-    @bedrooms = bedrooms
+  def initialize(apartment)
+    @apartment = apartment
+    @number = apartment[:number]
+    @monthly_rent = apartment[:monthly_rent]
+    @bathrooms = apartment[:bathrooms]
+    @bedrooms = apartment[:bedrooms]
     @renter = nil
   end
 
